@@ -6,11 +6,17 @@ public class dbs11219
 	{
 		
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		
-		for (; num > 0;)
+		System.out.println("값을 입력하세요");
+		int a = sc.nextInt();
+		int c = 1;
+		for (int i = 1; true; i++)	
 		{
-			System.out.println(num % 10);
-			num /= 10;
+			c += i;
+			if(i == a)
+			{
+				System.out.println(c);
+				break;
+			}
 		}
+	}
 }
