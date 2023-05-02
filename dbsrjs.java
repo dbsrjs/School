@@ -1,37 +1,46 @@
 package dbsrjs;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class dbsrjs 
 {
 	public static void main(String[] args) 
 	{
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);		
+		Random rand = new Random();
 		
-		System.out.println("메뉴 표기");
-		System.out.println("연산자 선택\n");
-		String op = sc.next();
-		System.out.println("비연산자1 선택");
-		int num1 = sc.nextInt();
-		System.out.println("비연산자2 선택");
-		int num2 = sc.nextInt();
+		int soju = rand.nextInt(49) + 1;
+		System.out.println("몇일까");
 		
-		switch (op) 
-		{
-		case "+":
-			System.out.println("결과는?" + (num1+num2));
-			break;
-		case "-":
-			System.out.println("결과는?" + (num1-num2));
-			break;
-		case "*":
-			System.out.println("결과는?" + (num1*num2));
-			break;
-		case "/":
-			System.out.println("결과는?" + ((float)num1/num2));
-			break;
-		default:
-			System.out.println("끝");
+		int num = 1;
+		
+		while (true) 
+		{		
+			int a = sc.nextInt();	
+			if (soju > a)
+			{
+				System.out.println("UP");
+				num++;
+			}
+			
+			else if (soju < a)
+			{
+				System.out.println("DOWN");
+				num++;
+			}
+			
+			else if (soju == a)
+			{
+				System.out.println("같다");
+				System.out.println(num +"번 도전");
+				break;
+			}
+			
+			else
+			{
+				System.out.println("1부터 50까지의 숫자만 입력");
+			}
 		}
 	}
 }
