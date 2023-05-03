@@ -1,46 +1,53 @@
 package dbsrjs;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class dbsrjs 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)	
 	{
-		Scanner sc = new Scanner(System.in);		
-		Random rand = new Random();
+		Scanner sc = new Scanner(System.in);
 		
-		int soju = rand.nextInt(49) + 1;
-		System.out.println("몇일까");
+		System.out.println("배열의 크기 입력");
+		int array_pos = sc.nextInt();
 		
-		int num = 1;
+		int[] array = new int[array_pos];
 		
-		while (true) 
-		{		
-			int a = sc.nextInt();	
-			if (soju > a)
+		for (int i = 0; i <array.length; i++) 
+		{
+			System.out.println("입력해주세요");
+			array[i] = sc.nextInt();
+		}
+		
+		System.out.print("정렬 전 :");
+		for (int i = 0; i < array.length; i++) 
+		{
+			System.out.print(" " + array[i]);
+		}
+		System.out.println();
+		
+		int min;
+		int temp;
+		for (int i = 0; i < array.length; i++)
+		{
+			min = i;
+			for (int j = i + 1; j < array.length; j++)
 			{
-				System.out.println("UP");
-				num++;
+				if (array[min] > array[j])
+				{
+					min = j;
+				}
 			}
+			temp = array[i];
+			array[i] = array[min];
+			array[min] = temp;
 			
-			else if (soju < a)
+			System.out.print("졍렬 후 : ");
+			for (int k = 0; k < array.length; k++)
 			{
-				System.out.println("DOWN");
-				num++;
+				System.out.print(" " + array[k]);
 			}
-			
-			else if (soju == a)
-			{
-				System.out.println("같다");
-				System.out.println(num +"번 도전");
-				break;
-			}
-			
-			else
-			{
-				System.out.println("1부터 50까지의 숫자만 입력");
-			}
+			System.out.println();
 		}
 	}
 }
