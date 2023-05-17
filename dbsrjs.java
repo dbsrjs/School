@@ -6,13 +6,14 @@ public class dbsrjs
 	{
 		Scanner sc = new Scanner(System.in);
         // 1~40까지 진행한다. for문
-        for(int i=1; i<=40; i++) 
+        for(int i=1; i<=40; i++)
         {
-        	int num = sc.nextInt();
+        	int 언제까지 = sc.nextInt();
             int 박수 = 0;
            
             while(true) 
             {
+            	int num = i;
                 System.out.println(num);
                 if(num%10==3 || num%10==6 || num%10==9) 
                 {
@@ -26,7 +27,7 @@ public class dbsrjs
                 }
             }
             
-           System.out.printf("1~4까지의 총 박수 수 : %d", num, 박수);
+           System.out.printf("1~4까지의 총 박수 수 : %d", 언제까지, 박수);
         }
        
        
