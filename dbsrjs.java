@@ -1,53 +1,48 @@
-package dbsrjs;
-
 import java.util.Scanner;
 
 public class dbsrjs 
 {
-	public static void main(String[] args)	
+	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("ë°°ì—´ì˜ í¬ê¸° ì…ë ¥");
-		int array_pos = sc.nextInt();
-		
-		int[] array = new int[array_pos];
-		
-		for (int i = 0; i <array.length; i++) 
-		{
-			System.out.println("ì…ë ¥í•´ì£¼ì„¸ìš”");
-			array[i] = sc.nextInt();
-		}
-		
-		System.out.print("ì •ë ¬ ì „ :");
-		for (int i = 0; i < array.length; i++) 
-		{
-			System.out.print(" " + array[i]);
-		}
-		System.out.println();
-		
-		int min;
-		int temp;
-		for (int i = 0; i < array.length; i++)
-		{
-			min = i;
-			for (int j = i + 1; j < array.length; j++)
-			{
-				if (array[min] > array[j])
-				{
-					min = j;
-				}
-			}
-			temp = array[i];
-			array[i] = array[min];
-			array[min] = temp;
-			
-			System.out.print("ì¡ë ¬ í›„ : ");
-			for (int k = 0; k < array.length; k++)
-			{
-				System.out.print(" " + array[k]);
-			}
-			System.out.println();
-		}
+        // 1~40±îÁö ÁøÇàÇÑ´Ù. for¹®
+        for(int i=1; i<=40; i++) 
+        {
+        	int num = sc.nextInt();
+            int ¹Ú¼ö = 0;
+           
+            while(true) 
+            {
+                System.out.println(num);
+                if(num%10==3 || num%10==6 || num%10==9) 
+                {
+                    System.out.println(num+": Â¦");
+                    ¹Ú¼ö++;
+                }
+                num = num / 10;
+                if(num==0) 
+                {
+                    break;
+                }
+            }
+            
+           System.out.printf("1~4±îÁöÀÇ ÃÑ ¹Ú¼ö ¼ö : %d", num, ¹Ú¼ö);
+        }
+       
+       
+        // 3, 6, 9°¡ µé¾î°£ ¼ıÀÚ´Â ¹Ú¼ö¸¦ Ä£´Ù.
+        // 10À¸·Î ³ª´³À»¶§ ³ª¸ÓÁö°¡ 3,6,9  
+        // 6321
+        // 6321 % 10 = 1
+        // 6321 / 10 = 632
+       
+        //  632 % 10 = 2
+        //  632 / 10 = 63
+       
+        //   63 % 10 = 3------>Â¦
+        //   63 / 10 = 6
+       
+        //    6 % 10 = 6------>Â¦
+        //    6 / 10 = 0 <------- 0ÀÌ µÉ¶§±îÁö               
 	}
 }
