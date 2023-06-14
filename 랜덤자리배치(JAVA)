@@ -6,14 +6,14 @@ public class sdf
 {
 	public static void main(String[] args) 
 	{
-		//C#½Ä µé¿©¾²±â
+		//C#Â½Ã„ ÂµÃ©Â¿Â©Â¾Â²Â±Ã¢
 		Scanner sc = new Scanner(System.in);
 		Random rd = new Random();
 		
-		System.out.println("°¡·Î");
+		System.out.println("Â°Â¡Â·ÃŽ");
 		int rows = sc.nextInt();
 		
-		System.out.println("¼¼·Î");
+		System.out.println("Â¼Â¼Â·ÃŽ");
 		int cols = sc.nextInt();
 		
 		int[][] set = new int [rows][cols];
