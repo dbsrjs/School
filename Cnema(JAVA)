@@ -6,13 +6,13 @@ public class Cnema {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// ¿µÈ­ ¿¹¸Å ÇÁ·Î±×·¥
-		// 2Â÷¿ø ¹è¿­ »ç¿ë
+		// ì˜í™” ì˜ˆë§¤ í”„ë¡œê·¸ë¨
+		// 2ì°¨ì› ë°°ì—´ ì‚¬ìš©
 		
-		// ³²Àº ÁÂ¼® º¸±â
-		// ÁÂ¼® ¿¹¸Å
-		// ¿¹¸Å È®ÀÎ
-		// Á¾·á
+		// ë‚¨ì€ ì¢Œì„ ë³´ê¸°
+		// ì¢Œì„ ì˜ˆë§¤
+		// ì˜ˆë§¤ í™•ì¸
+		// ì¢…ë£Œ
 		
 		System.out.println("\r\n" + 
 				"                                         __  __         ______                                              \r\n" + 
@@ -32,17 +32,17 @@ public class Cnema {
 		String[][] set = new String[5][5];
 		while(true){
 			
-			System.out.println("³²Àº ÁÂ¼® È®ÀÎ(1) / ÁÂ¼® ¿¹¸ÅÇÏ±â(2) / ¿¹¸Å È®ÀÎÇÏ±â(3) / Á¾·áÇÏ±â(4)");
+			System.out.println("ë‚¨ì€ ì¢Œì„ í™•ì¸(1) / ì¢Œì„ ì˜ˆë§¤í•˜ê¸°(2) / ì˜ˆë§¤ í™•ì¸í•˜ê¸°(3) / ì¢…ë£Œí•˜ê¸°(4)");
 			int who = sc.nextInt();			
 			switch (who) {
 			case 1:
-				System.out.println("------------- ³²Àº ÁÂ¼® È®ÀÎ -------------");
+				System.out.println("------------- ë‚¨ì€ ì¢Œì„ í™•ì¸ -------------");
 				for (int i = 0; i < set.length; i++) {
 					for (int j = 0; j < set.length; j++) {
 						if(set[i][j] == null) {
-							System.out.printf("¡à  ");							
+							System.out.printf("â–¡  ");							
 						} else {
-							System.out.println("¡á  ");
+							System.out.println("â–   ");
 						}
 					}
 					System.out.println();
@@ -52,40 +52,40 @@ public class Cnema {
 				break;
 				
 			case 2:
-				System.out.println("------------- ÁÂ¼® ¿¹¸Å ÇÏ±â -------------");
+				System.out.println("------------- ì¢Œì„ ì˜ˆë§¤ í•˜ê¸° -------------");
 				System.out.println();
 				
-				System.out.println("¸î Çà?");
+				System.out.println("ëª‡ í–‰?");
 				int row = sc.nextInt();
 				
-				System.out.println("¸î ¿­?");
+				System.out.println("ëª‡ ì—´?");
 				int col = sc.nextInt();
 				if ((row>=0 && row<5) && (col>=0 && col<5)) {					
-					System.out.println("ÀÌ¸§?");
+					System.out.println("ì´ë¦„?");
 					String name = sc.next();
 					
 					if (set[row][col] == null) {
 						set[row][col] = name;
-						System.out.println("¿¹¸Å°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+						System.out.println("ì˜ˆë§¤ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 					} else {
-						System.out.println("ÀÌ¹Ì ¼±ÅÃµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä.");					
+						System.out.println("ì´ë¯¸ ì„ íƒëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.");					
 					}
 				} else {
-					System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+					System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				}
 				break;
 				
 			case 3:
-				System.out.println("------------- ÁÂ¼® ¿¹¸Å È®ÀÎ -------------");
-				System.out.println("¿¹¾àÀÚÀÇ ¼º¸íÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("------------- ì¢Œì„ ì˜ˆë§¤ í™•ì¸ -------------");
+				System.out.println("ì˜ˆì•½ìì˜ ì„±ëª…ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				String rsv = sc.next(); 
 				
 				for (int i = 0; i < set.length; i++) {
 					for (int j = 0; j < set.length; j++) {
 						if(set[i][j] == rsv) {
-							System.out.println("ÁÂ¼®" +i+ "Çà" +j+ "¿­ ÀÔ´Ï´Ù.");
+							System.out.println("ì¢Œì„" +i+ "í–‰" +j+ "ì—´ ì…ë‹ˆë‹¤.");
 						} else {
-							System.out.println("ÇØ´ç ¼º¸íÀ» °¡Áø ¿¹¾àÀÚ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+							System.out.println("í•´ë‹¹ ì„±ëª…ì„ ê°€ì§„ ì˜ˆì•½ìê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 						}						
 					}
 				}
@@ -93,11 +93,11 @@ public class Cnema {
 				
 				break;
 			case 4:
-				System.out.println("------------- ÇÁ·Î±×·¥ Á¾·á -------------");
+				System.out.println("------------- í”„ë¡œê·¸ë¨ ì¢…ë£Œ -------------");
 				System.exit(0);
 				break;
 			default :
-				System.out.println("¿À·ù ¹ß»ı");
+				System.out.println("ì˜¤ë¥˜ ë°œìƒ");
 			}
 		}		
 	}
