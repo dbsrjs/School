@@ -7,7 +7,7 @@ public class num
 		Scanner sc = new Scanner(System.in);
 				
 		int sum = 0;
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+		System.out.println("Â¼Ã½Ã€ÃšÂ¸Â¦ Ã€Ã”Â·Ã‚Ã‡Ã˜ ÃÃ–Â¼Â¼Â¿Ã¤.");
 		int num = sc.nextInt();
 		
 		for (int i = 1; i <= num; i++)
