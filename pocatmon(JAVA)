@@ -6,7 +6,7 @@ public class pocatmon {
 	String name;
 	
 	pocatmon() {
-		this.name = "Æ÷ÄÏ¸ó";
+		this.name = "Ã†Ã·Ã„ÃÂ¸Ã³";
 	}
 	
 	pocatmon(String name) {
@@ -21,6 +21,6 @@ public class pocatmon {
 	}
 	
 	void Atk() {
-		System.out.println(name+"ÀÌ ¸¦ °ø°İÇÕ´Ï´Ù.");
+		System.out.println(name+"Ã€ÃŒ Â¸Â¦ Â°Ã¸Â°ÃÃ‡Ã•Â´ÃÂ´Ã™.");
 	}
 }
