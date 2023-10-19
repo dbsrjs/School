@@ -1,0 +1,20 @@
+import random,sys
+
+class Mine_Game:
+    def __init__(self, x, y, boom):
+        null = '\033[30m \033[40m' + '■' + '\033[0m'
+        red = '\033[31m \033[41m' + '■' + '\033[0m'
+        
+        self.x = x
+        self.y = y
+        self.boom = boom
+        txt = "test"
+
+        panel = [[null for i in range(x)] for i in range(y)]
+
+        for i in range(len(panel)):
+            for j in range(len(panel[0])):
+                print(panel[i][j], end=" ")
+            print()
+
+game = Mine_Game(3, 7, 10)
