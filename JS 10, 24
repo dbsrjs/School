@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        var name;
+        if (prompt("입력") == "1") { //prompt = input
+            name = "<h1>못생긴 한결이</h1>";
+        } else {
+            name = "<h2>잘생긴 한결이</h2>";
+        }
+        document.write(name);   //write = 출력, alert = 알림창(document 필요 X)
+        */
+
+        /*
+        var a = true;
+        var b = false;
+        var c = 10 > 5; //true
+        var d = Boolean(null);  //false
+
+        document.write(a, "<br>")   //<br> = 줄 바꿈
+        document.write(b, "<br>")
+        document.write(c, "<br>")
+        document.write(d, "<br>")
+        */
+
+        var c = prompt("연산자 입력(1 : 덧셈, 2 : 뺄셈, 3 : 곱셈, 4 : 나누기, 5 : 나머지)")
+        var a = prompt("첫번째 값 입력.");
+        var b = prompt("두번째 값 입력.");
+
+        if (c == "1") {
+            document.write(a, "+", b, "=", Number(a) + Number(b))
+        } else if (c == "2") {
+            document.write(a, "-", b, "=", Number(a) - Number(b))
+        } else if (c == "3") {
+            document.write(a, "*", b, "=", Number(a) * Number(b))
+        } else if (c == "4") {
+            document.write(a, "/", b, "=", Number(a) / Number(b))
+        } else if (c == "5") {
+            document.write(a, "%", b, "=", Number(a) % Number(b))
+        }
+
+    </script>
+</body>
+
+</html>
