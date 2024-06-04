@@ -1,8 +1,6 @@
-package poly.ex3;
+package lang.object.poly;
 
-public class Dog extends Animal {
-
-    @Override
+public class Dog {
     public void sound() {
         System.out.println("멍멍");
     }
