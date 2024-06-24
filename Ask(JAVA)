@@ -1,9 +1,7 @@
 package jv_0712;
 
 public class Ask {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
 	       
         char a = 'S';
         char b = 'U';
